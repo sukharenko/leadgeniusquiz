@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reddit Top Stories</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+				<a class="navbar-brand" href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i> Reddit</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Top Stories <span class="sr-only">(current)</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" id="topBody">
+
+		<div class="topTemplate">
+			<div class="media">
+				<div class="media-left">
+					<a href="{{permalink}}" target="_blank">
+						<img class="media-object thimg" src="{{thumbnail}}" alt="{{title}}">
+					</a>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading"><a href="{{permalink}}" target="_blank">{{title}}</a></h4>
+					<div><small>Submitted {{submittime}} by <a href="{{authorlink}}" target="_blank">{{author}}</a> to <a href="{{subredditlink}}" target="_blank">{{subreddit}}</a></small></div>
+					<div class="labels">
+						<a href="{{permalink}}" class="noUnderline"><span class="label label-primary">{{commentscount}}</span> Comments</a> &nbsp;&nbsp;
+						<span class="label label-success">{{ups}}</span> <i class="fa fa-thumbs-up" aria-hidden="true"></i> &nbsp;&nbsp;
+						<span class="label label-danger">{{downs}}</span> <i class="fa fa-thumbs-down" aria-hidden="true"></i> &nbsp;&nbsp;
+					</div>
+				</div>
+			</div>
+			<hr />
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="https://use.fontawesome.com/762ba5d20f.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

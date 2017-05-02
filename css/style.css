@@ -1,0 +1,16 @@
+.topTemplate {
+	display: none;
+}
+
+.thimg {
+	width: 70px;
+	height: 70px;
+}
+
+.noUnderline:hover {
+	text-decoration: none;
+}
+
+.labels {
+	margin-top: 8px;
+}
